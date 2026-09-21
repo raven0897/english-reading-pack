@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4 · The Blind Box Craze</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  /* 字号标尺：整体放大/缩小只改这 5 个值。原文 19px 是舒适基准，其余向它靠 */
+  :root { --fs-prose:19px; --fs-body:16.5px; --fs-main:16px; --fs-sub:14px; --fs-mini:13.5px; }
+  body { background:#FBFAF7; color:#2C2C2A; font-family:"Microsoft YaHei","PingFang SC",sans-serif; font-size:var(--fs-body); line-height:1.75; }
+  .page { max-width:76ch; margin:0 auto; padding:2rem 1.25rem 4rem; }
+  a { color:#854F0B; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .topnav { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px 16px; border-bottom:1px solid #E4DCC8; padding-bottom:10px; margin-bottom:22px; font-size:var(--fs-mini); color:#5F5E5A; }
+  .topnav b { font-weight:500; font-size:var(--fs-sub); color:#2C2C2A; }
+  .panel { background:#F5F1E8; border:1px solid #E4DCC8; border-radius:10px; padding:20px 22px; margin-bottom:26px; }
+  .panel h2, h2.sec { font-size:20px; font-weight:500; color:#2C2C2A; margin-bottom:4px; }
+  h2.sec { margin-top:32px; padding-bottom:6px; border-bottom:1px solid #E4DCC8; }
+  .sec-sub { color:#5F5E5A; font-size:var(--fs-sub); margin-bottom:12px; line-height:1.7; }
+  table { width:100%; border-collapse:collapse; font-size:var(--fs-main); margin:8px 0 4px; }
+  th { text-align:left; background:#EFE9DA; padding:9px 12px; border-bottom:2px solid #E0D5BC; color:#2C2C2A; font-weight:500; }
+  td { padding:9px 12px; border-bottom:1px solid #EDE7DA; vertical-align:top; }
+  td.en { font-family:Georgia,serif; }
+  .badge { display:inline-block; border-radius:4px; padding:1px 7px; font-size:12px; line-height:1.6; font-family:"Microsoft YaHei",sans-serif; white-space:nowrap; margin-left:7px; vertical-align:1px; }
+  .badge.w { background:#FAEEDA; color:#854F0B; }
+  .badge.r { border:1px solid #E4DCC8; color:#8A857C; }
+  .badge.u { background:#EFE9DA; color:#5F5E5A; }
+  details { border:1px solid #E4DCC8; border-radius:8px; padding:10px 14px; margin:8px 0; background:#FDFBF6; }
+  details.summary-box { background:#F5F1E8; }
+  summary { cursor:pointer; font-size:15.5px; color:#2C2C2A; }
+  summary:hover { color:#854F0B; }
+  details[open] summary { margin-bottom:8px; }
+  .prose p { font-family:Georgia,"Microsoft YaHei",serif; font-size:var(--fs-prose); line-height:1.9; margin:0 0 1.2em; }
+  .core { text-decoration:underline; text-decoration-color:#BA7517; text-decoration-thickness:1.5px; text-underline-offset:4px; }
+  .guess { text-decoration:underline dotted; text-decoration-color:#C9A468; text-underline-offset:4px; }
+  .chunk { background:#FDF0CE; border-radius:3px; padding:1px 4px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .gloss { color:#575149; font-size:.84em; font-family:"Microsoft YaHei",sans-serif; }
+  .legend { font-size:var(--fs-mini); color:#5F5E5A; margin:0 0 14px; line-height:1.75; }
+  .count { font-size:var(--fs-mini); color:#8A857C; margin:0 0 6px; }
+  .zh { font-size:var(--fs-main); font-weight:500; color:#2C2C2A; display:flex; align-items:baseline; gap:8px; }
+  .zh span { font-size:13px; color:#8A857C; font-weight:400; }
+  .zone { border:0; border-top:1px solid #E4DCC8; border-radius:0; background:transparent;
+           margin:14px 0 0; padding:11px 0 0; }
+  .zone.first { border-top:none; margin-top:8px; padding-top:0; }
+  .zone > summary.zh { list-style:none; padding:0; margin:0; }
+  .zone > summary.zh::-webkit-details-marker { display:none; }
+  .zone > summary.zh::after { content:"▸"; font-size:11px; color:#8A857C; }
+  .zone[open] > summary.zh::after { content:"▾"; }
+  .rowlist { margin-top:8px; border:1px solid #E4DCC8; border-radius:8px; background:#FDFBF6; overflow:hidden; }
+  .rowlist details { border:none; border-radius:0; margin:0; padding:7px 12px; background:transparent; border-bottom:1px solid #EDE7DA; }
+  .rowlist details:last-child { border-bottom:none; }
+  .rowlist details summary { font-size:15.5px; }
+  .rowlist details summary b { font-family:Georgia,serif; font-weight:400; }
+  .rowlist details summary i { font-style:normal; color:#5F5E5A; font-size:var(--fs-mini); margin-left:8px; }
+  .rowlist details > div { font-size:var(--fs-sub); color:#5F5E5A; padding-top:5px; line-height:1.75; }
+  tr.ckrow td { background:#FDF8EE; }
+  tr.note td { background:#F5F1E8; color:#5F5E5A; font-size:var(--fs-sub); padding:7px 12px; }
+  .coglist { font-family:Georgia,serif; font-size:var(--fs-main); color:#5F5E5A; line-height:2.1; }
+  .dp p { font-family:Georgia,"Microsoft YaHei",serif; font-size:18px; line-height:1.85; margin:0 0 1em; }
+  .jw { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:2px 18px; font-size:var(--fs-main); }
+  .jw div { padding:4px 0; border-bottom:1px solid #EDE7DA; }
+  .jw b { font-family:Georgia,serif; font-weight:400; }
+  .footer { border-top:1px solid #E4DCC8; margin-top:36px; padding-top:14px; display:flex; justify-content:space-between; font-size:var(--fs-mini); color:#5F5E5A; }
+  .tip { font-size:var(--fs-sub); color:#5F5E5A; background:#F5F1E8; border-left:3px solid #BA7517; padding:10px 14px; border-radius:0 6px 6px 0; margin:12px 0; line-height:1.75; }
+  .peeklabel { display:inline-block; cursor:pointer; font-size:var(--fs-sub); color:#854F0B; border:1px solid #E4DCC8; border-radius:6px; padding:4px 14px; margin:2px 0 8px; background:#FDFBF6; user-select:none; }
+  .peeklabel:hover { border-color:#BA7517; }
+  #peek { display:none; }
+  #peek:checked ~ table.core td:nth-child(3) { color:transparent; }
+  @media print { body { background:#fff; } .gloss { color:#46423C; } }
+</style>
+</head>
+<body>
+<!--WORD-META
+{"n":4,"t":"The Blind Box Craze","date":"2026-09-20","stats":{"tokens":181,"lemmas":123,"core":17,"guess":8,"junior":26,"cog":11},"words":[
+{"w":"concept","c":"core","m":"概念；想法"},{"w":"contain","c":"core","m":"包含；装有"},{"w":"figure","c":"core","m":"手办；塑像；人物；数字"},{"w":"mystery","c":"core","m":"未知的事物；神秘"},{"w":"series","c":"core","m":"系列"},{"w":"element","c":"core","m":"要素；元素"},{"w":"rare","c":"core","m":"稀有的；罕见的"},{"w":"craze","c":"core","m":"狂热；风潮"},{"w":"display","c":"core","m":"展示；陈列"},{"w":"source","c":"core","m":"来源；源泉"},{"w":"desire","c":"core","m":"渴望；欲望"},{"w":"broad","c":"core","m":"广泛的；广阔的"},
+{"w":"a household name","c":"core","k":"collocation","m":"家喻户晓的名字（品牌/人）"},{"w":"tap into","c":"core","k":"phrasal","m":"挖掘；利用（需求、情绪）"},{"w":"vary from A to B","c":"core","k":"phrase","m":"从A到B不等；在A与B之间变化"},{"w":"not only … but also","c":"core","k":"phrase","m":"不仅…而且（一对呼应词，用来叠加）"},{"w":"in the hope of","c":"core","k":"collocation","m":"抱着…的希望；为了能…"},
+{"w":"excitement","c":"guess","m":"兴奋；刺激感"},{"w":"uncertainty","c":"guess","m":"不确定；未知"},{"w":"collectors","c":"guess","m":"收藏者"},{"w":"collections","c":"guess","m":"收藏品；一批藏品"},{"w":"artistic","c":"guess","m":"艺术的；有艺术感的"},{"w":"successfully","c":"guess","m":"成功地"},{"w":"considerable","c":"guess","m":"相当大的；可观的"},{"w":"self-expression","c":"guess","m":"自我表达"},
+{"w":"become","c":"junior","m":"变成；成为"},{"w":"blind","c":"junior","m":"盲的；看不见的"},{"w":"character","c":"junior","m":"角色；人物"},{"w":"collect","c":"junior","m":"收集"},{"w":"community","c":"junior","m":"社区；群体"},{"w":"connect","c":"junior","m":"连接；联系"},{"w":"consider","c":"junior","m":"考虑；认为"},{"w":"create","c":"junior","m":"创造"},{"w":"culture","c":"junior","m":"文化"},{"w":"design","c":"junior","m":"设计"},{"w":"form","c":"junior","m":"形式"},{"w":"hobby","c":"junior","m":"爱好"},{"w":"joy","c":"junior","m":"快乐；喜悦"},{"w":"lie","c":"junior","m":"在于；位于"},{"w":"media","c":"junior","m":"媒体"},{"w":"popular","c":"junior","m":"受欢迎的"},{"w":"repeat","c":"junior","m":"重复"},{"w":"row","c":"junior","m":"一排；一行"},{"w":"sign","c":"junior","m":"迹象；标志"},{"w":"social","c":"junior","m":"社交的；社会的"},{"w":"spend","c":"junior","m":"花费"},{"w":"store","c":"junior","m":"商店"},{"w":"style","c":"junior","m":"风格"},{"w":"surprise","c":"junior","m":"惊喜；惊讶"},{"w":"trade","c":"junior","m":"交换；交易"},{"w":"treasure","c":"junior","m":"珍宝；宝贝"},
+{"w":"adorable","c":"cog","m":"可爱的"},{"w":"innovative","c":"cog","m":"创新的"},{"w":"booming","c":"cog","m":"迅速发展的；火爆的"},{"w":"limited-edition","c":"cog","m":"限量版的"},{"w":"delicate","c":"cog","m":"精致的；精巧的"},{"w":"appealing","c":"cog","m":"吸引人的"},{"w":"fading","c":"cog","m":"消退；衰退"},{"w":"fellow","c":"cog","m":"同类的；同伴的"},{"w":"enthusiasts","c":"cog","m":"爱好者；热衷的人"},{"w":"amount","c":"cog","m":"数量；金额"},{"w":"comfort","c":"cog","m":"舒适；慰藉"}
+]}
+-->
+<div class="page">
+
+<div class="topnav">
+  <b>4 · The Blind Box Craze</b>
+  <span><a href="#panorama">生词全景</a> · <a href="#original">原文</a> · <a href="#derivatives">衍生文</a> ｜ <a href="ABCmap.html">ABCmap 词汇地图</a></span>
+</div>
+
+<div class="panel" id="panorama">
+  <h2>生词全景</h2>
+  <div class="sec-sub">四层判定：功能词与小学词默认已掌握（不列）｜初中新增词进「基础词自查」｜超纲词才分核心必背 / 可猜 / 认知。</div>
+
+  <div class="count">共 62 条 · 核心 17（含语块 5）· 可猜 8 · 基础词 26 · 认知 11</div>
+
+  <div class="zone first">
+    <div class="zh">① 核心必背 <span>17 · 另有前几篇学过的旧词 3 条见表末</span></div>
+    <div class="sec-sub" style="margin-top:4px;">超纲、不查就读不懂、值得背。<b>浅底的行是语块</b>——整块记，别逐词拆。读完原文后遮住释义自查。</div>
+    <input type="checkbox" id="peek">
+    <label for="peek" class="peeklabel">遮住「释义」列自查（点击切换）</label>
+    <table class="core">
+    <tr><th style="width:27%;">条目</th><th style="width:17%;">类型</th><th>释义</th></tr>
+    <tr><td class="en">concept<span class="badge w">写作</span></td><td>单词 · n.</td><td>概念；想法（the blind box concept 盲盒这个概念）</td></tr>
+    <tr><td class="en">contain<span class="badge w">写作</span></td><td>单词 · v.</td><td>包含；装有（each box contains a figure 每个盒子里装着一个手办）</td></tr>
+    <tr><td class="en">figure<span class="badge r">阅读</span></td><td>单词 · n.</td><td>手办；塑像；也作"人物""数字"（本文指盒子里的小塑像）</td></tr>
+    <tr><td class="en">mystery<span class="badge r">阅读</span></td><td>单词 · n./adj.</td><td>未知的事物；神秘（a mystery figure 不知道是哪一款的塑像）</td></tr>
+    <tr><td class="en">series<span class="badge r">阅读</span></td><td>单词 · n.</td><td>系列（单复数同形：a popular series 一个热门系列）</td></tr>
+    <tr><td class="en">element<span class="badge r">阅读</span></td><td>单词 · n.</td><td>要素；元素（this element of surprise 这份"惊喜"要素）</td></tr>
+    <tr><td class="en">rare<span class="badge w">写作</span></td><td>单词 · adj.</td><td>稀有的；罕见的（a rare figure 稀有款，即"隐藏款"）</td></tr>
+    <tr><td class="en">craze<span class="badge r">阅读</span></td><td>单词 · n.</td><td>狂热；风潮（spreads this craze 把这股风潮传开）</td></tr>
+    <tr><td class="en">display<span class="badge r">阅读</span></td><td>单词 · v.</td><td>展示；陈列（display their collections 把自己的收藏摆出来）</td></tr>
+    <tr><td class="en">source<span class="badge w">写作</span></td><td>单词 · n.</td><td>来源；源泉（a source of joy 快乐的来源）</td></tr>
+    <tr><td class="en">desire<span class="badge r">阅读</span></td><td>单词 · n./v.</td><td>渴望；欲望（the desire for surprise 对惊喜的渴望）</td></tr>
+    <tr><td class="en">broad<span class="badge w">写作</span></td><td>单词 · adj.</td><td>广泛的；广阔的（a broad audience 广泛的受众）</td></tr>
+    <tr class="ckrow"><td class="en">a household name<span class="badge r">阅读</span></td><td>搭配</td><td>家喻户晓的名字（household 是"家庭的"，合起来指人人知道的品牌或人）</td></tr>
+    <tr class="ckrow"><td class="en">tap into<span class="badge w">写作</span></td><td>短语动词</td><td>挖掘；利用（需求、情绪等）——tapped into the desire 正好利用了这种渴望</td></tr>
+    <tr class="ckrow"><td class="en">vary from A to B<span class="badge w">写作</span></td><td>句式框架</td><td>从 A 到 B 不等；在 A 与 B 之间变化（本文：vary from cute to artistic）</td></tr>
+    <tr class="ckrow"><td class="en">not only … but also<span class="badge w">写作</span></td><td>句式框架</td><td>不仅…而且——一对呼应词，用来往上一层叠加</td></tr>
+    <tr class="ckrow"><td class="en">in the hope of<span class="badge r">阅读</span></td><td>搭配</td><td>抱着…的希望；为了能…（后面接 doing：in the hope of finding a rare one）</td></tr>
+    <tr class="note"><td colspan="3">以下 3 条是前几篇学过、本篇又遇到的旧词——遮住释义自查，想不起来再回头看那一篇，本篇不重教。</td></tr>
+    <tr><td class="en">purchase<span class="badge u">第 2 篇</span></td><td>旧词重现 · v.</td><td>购买</td></tr>
+    <tr><td class="en">audience<span class="badge u">第 3 篇</span></td><td>旧词重现 · n.</td><td>观众；受众</td></tr>
+    <tr><td class="en">phenomenon<span class="badge u">第 3 篇</span></td><td>旧词重现 · n.</td><td>现象</td></tr>
+  </table>
+  </div>
+
+  <details class="zone">
+    <summary class="zh">② 可猜词 <span>8</span> · 先猜再展开</summary>
+    <div class="sec-sub" style="margin-top:6px;">超纲但能靠词根、合成、上下文推出来——先猜 10 秒，猜不出再展开。</div>
+    <div class="rowlist">
+      <details><summary><b>excitement</b><i>上下文：拆盒前不知道会抽到什么——那种感觉叫什么？</i></summary><div>本文义：兴奋；刺激感。The excitement lies in the uncertainty——好玩的地方就在于"不确定"。</div></details>
+      <details><summary><b>uncertainty</b><i>un-（不）+ certain（确定的）+ -ty（名词后缀）</i></summary><div>本文义：不确定；未知。拆盒之前的不确定，正是乐趣所在。</div></details>
+      <details><summary><b>collectors</b><i>collect（收集）+ -or（做…的人）</i></summary><div>本文义：收藏者。Collectors share their treasures——收藏者晒出自己的宝贝。</div></details>
+      <details><summary><b>collections</b><i>collect（收集）+ -ion（名词后缀）</i></summary><div>本文义：收藏品；一批藏品。display their collections 把自己的藏品摆出来。</div></details>
+      <details><summary><b>artistic</b><i>art（艺术）+ -istic（…的）</i></summary><div>本文义：艺术的；有艺术感的。vary from cute and playful to artistic 从可爱俏皮到有艺术感。</div></details>
+      <details><summary><b>successfully</b><i>success（成功）+ -ful + -ly（副词后缀）</i></summary><div>本文义：成功地。has successfully tapped into the desire 成功地利用了这种渴望。</div></details>
+      <details><summary><b>considerable</b><i>consider（考虑）+ -able（值得…的）→ 大到值得考虑的</i></summary><div>本文义：相当大的；可观的。considerable amounts of money 数目可观的钱。</div></details>
+      <details><summary><b>self-expression</b><i>self（自己）+ expression（表达，express 的名词）</i></summary><div>本文义：自我表达。a form of self-expression 一种表达自己的方式。</div></details>
+    </div>
+  </details>
+
+  <details class="zone">
+    <summary class="zh">③ 基础词自查 <span>26</span> · 认识就过</summary>
+    <div class="sec-sub" style="margin-top:6px;">初中新增词，<b>不要求背</b>——扫 30 秒，认识就过；哪个真不认识，自己心里记一下。它们在原文里不再单独标注。</div>
+    <div class="jw" style="margin-top:8px;">
+      <div><b>become</b> 变成；成为</div>
+      <div><b>blind</b> 盲的；看不见的</div>
+      <div><b>character</b> 角色；人物</div>
+      <div><b>collect</b> 收集</div>
+      <div><b>community</b> 社区；群体</div>
+      <div><b>connect</b> 连接；联系</div>
+      <div><b>consider</b> 考虑；认为</div>
+      <div><b>create</b> 创造</div>
+      <div><b>culture</b> 文化</div>
+      <div><b>design</b> 设计</div>
+      <div><b>form</b> 形式</div>
+      <div><b>hobby</b> 爱好</div>
+      <div><b>joy</b> 快乐；喜悦</div>
+      <div><b>lie</b> 在于；位于</div>
+      <div><b>media</b> 媒体</div>
+      <div><b>popular</b> 受欢迎的</div>
+      <div><b>repeat</b> 重复</div>
+      <div><b>row</b> 一排；一行</div>
+      <div><b>sign</b> 迹象；标志</div>
+      <div><b>social</b> 社交的；社会的</div>
+      <div><b>spend</b> 花费</div>
+      <div><b>store</b> 商店</div>
+      <div><b>style</b> 风格</div>
+      <div><b>surprise</b> 惊喜；惊讶</div>
+      <div><b>trade</b> 交换；交易</div>
+      <div><b>treasure</b> 珍宝；宝贝</div>
+    </div>
+  </details>
+
+  <details class="zone">
+    <summary class="zh">④ 认知词 <span>11</span> · 释义只在原文</summary>
+    <div class="sec-sub" style="margin-top:6px;">低频词与领域词。不建表，义以灰色小字标在原文首现处，滑过即可。Pop Mart、China 是专名，不标注。</div>
+    <div class="coglist" style="margin-top:6px;">adorable · innovative · booming · limited-edition · delicate · appealing · fading · fellow · enthusiasts · amount · comfort</div>
+  </details>
+
+  <div class="tip">两遍阅读法：第一遍不查词先抓大意，第二遍对照核心表与自查区解决卡点。语块按整块记，别逐词拆。</div>
+</div>
+
+<h2 class="sec" id="original">原文</h2>
+<p class="legend">实线下划线＝核心单词｜浅底纹＝语块（整块记，别逐词拆）｜虚线＝可猜词（先猜）｜灰色小字＝认知词（直接看，不用记）｜初中新增词不再单独标注，义在上方自查区</p>
+
+<div class="prose">
+  <p>Pop Mart has become <span class="chunk">a household name</span> among China's young people, famous for its <span class="gloss">adorable（可爱的）</span> designer toys and <span class="gloss">innovative（创新的）</span> blind box <span class="core">concept</span>.</p>
+  <p>Walking into a Pop Mart store, you can see rows of colorful boxes, each <span class="core">containing</span> a <span class="core">mystery</span> <span class="core">figure</span> from a popular <span class="core">series</span>.</p>
+  <p>The <span class="guess">excitement</span> lies in the <span class="guess">uncertainty</span>: you never know which character you will get until you open the box.</p>
+  <p>This <span class="core">element</span> of surprise has created a <span class="gloss">booming（迅速发展的；火爆的）</span> culture of collecting.</p>
+  <p>Young people spend <span class="guess">considerable</span> <span class="gloss">amounts（数量；金额）</span> of money <span class="core">purchasing</span> box after box <span class="chunk">in the hope of</span> finding a <span class="core">rare</span> or <span class="gloss">limited-edition（限量版的）</span> figure.</p>
+  <p>Social media spreads this <span class="core">craze</span>.</p>
+  <p><span class="guess">Collectors</span> share their treasures, <span class="core">display</span> their <span class="guess">collections</span>, and trade repeated ones with <span class="gloss">fellow（同类的；同伴的）</span> <span class="gloss">enthusiasts（爱好者；热衷的人）</span>.</p>
+  <p>For many, collecting these toys is <span class="chunk">not only</span> a hobby, <span class="chunk">but also</span> a <span class="core">source</span> of joy, a way to connect with others, and a form of <span class="guess">self-expression</span>.</p>
+  <p>The design styles <span class="chunk">vary from</span> cute and playful <span class="chunk">to</span> <span class="guess">artistic</span> and <span class="gloss">delicate（精致的；精巧的）</span>, <span class="gloss">appealing（吸引人的）</span> to a <span class="core">broad</span> <span class="core">audience</span>.</p>
+  <p>Pop Mart has <span class="guess">successfully</span> <span class="chunk">tapped into</span> the <span class="core">desire</span> for surprise, <span class="gloss">comfort（舒适；慰藉）</span>, and community, creating a cultural <span class="core">phenomenon</span> that shows no signs of <span class="gloss">fading（消退；衰退）</span>.</p>
+</div>
+
+<h2 class="sec" id="derivatives">衍生文</h2>
+<p class="legend">两篇短文只用学过的词（含前几篇的），反复遇到才是记住的开始。核心单词划线重现、语块浅底重现、可猜词虚线重现；初中新增词与认知词第二遍不再给义。</p>
+
+<details class="summary-box"><summary>衍生文 · 简单篇 —— 当天读完原文后打开</summary>
+  <div class="sec-sub">同话题邻场景（我买第一个盲盒），句子更短。</div>
+  <div class="dp">
+    <p><b>My First Blind Box</b></p>
+    <p>I bought my first blind box last month. In the shop there were rows of colorful boxes, and each box <span class="core">contains</span> a <span class="core">mystery</span> <span class="core">figure</span> from a popular <span class="core">series</span>. You pay, you open it, and you only know the answer after that. That is the whole idea: the <span class="guess">excitement</span> comes from the <span class="guess">uncertainty</span>.</p>
+    <p>I paid sixty yuan <span class="chunk">in the hope of</span> finding a <span class="core">rare</span> one. I got a common <span class="core">figure</span>, not a limited-edition one, but I was not sad. The next day I went back and bought another.</p>
+    <p>Now I understand the <span class="core">craze</span> a little. It is <span class="chunk">not only</span> a toy, <span class="chunk">but also</span> a small surprise on a tired day. My friends <span class="core">display</span> their collections at home and trade the ones they do not want. I am not a serious <span class="guess">collector</span> yet — but I have three figures now.</p>
+  </div>
+  <p class="legend">复现覆盖：核心单词 7/12 · 语块 2/5 · 可猜 3/8</p>
+</details>
+
+<details class="summary-box"><summary>衍生文 · 稍难篇 —— 隔天再打开，检验你还记得多少</summary>
+  <div class="sec-sub">换体裁（说明 → 议论），句子更长，但不引入新的生词。</div>
+  <div class="dp">
+    <p><b>What Are We Really Buying?</b></p>
+    <p>Pop Mart is now <span class="chunk">a household name</span> in China, but the blind box <span class="core">concept</span> is older than that: people have always paid for a small surprise. What is new is the size of the <span class="core">craze</span>, and the <span class="guess">considerable</span> amounts of money behind it.</p>
+    <p>Companies have <span class="guess">successfully</span> <span class="chunk">tapped into</span> one simple <span class="core">desire</span> — not for the figure itself, but for the moment before you open the box. That <span class="core">element</span> of surprise is the real product, and it is why <span class="guess">collectors</span> keep buying: the next one may be <span class="core">rare</span>.</p>
+    <p>People say they collect these toys for joy, and that is true. But a collection is <span class="chunk">not only</span> a hobby, <span class="chunk">but also</span> a way to connect with others and a form of <span class="guess">self-expression</span>. The styles <span class="chunk">vary from</span> cute and playful <span class="chunk">to</span> <span class="guess">artistic</span> and delicate, and the craze now reaches a <span class="core">broad</span> audience of all ages.</p>
+    <p>In the end, a blind box is a <span class="core">source</span> of small comfort: a surprise you can hold, in a life where very little is certain.</p>
+  </div>
+  <p class="legend">复现覆盖：核心单词 8/12 · 语块 4/5 · 可猜 6/8 ｜ 两篇合计：核心 12/12（含语块 5/5）· 可猜 8/8 全覆盖</p>
+</details>
+
+<div class="footer">
+  <span>上一篇：<a href="3.html">3 · The Rise of Short Video</a></span>
+  <span>下一篇：<a href="5.html">5 · Choosing a Career Path</a> ｜ 返回 <a href="ABCmap.html">ABCmap 词汇地图</a></span>
+</div>
+
+</div>
+</body>
+</html>

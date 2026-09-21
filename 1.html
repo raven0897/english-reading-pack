@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1 · Lifestyles Around the World</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  /* 字号标尺：整体放大/缩小只改这 5 个值。原文 19px 是舒适基准，其余向它靠 */
+  :root { --fs-prose:19px; --fs-body:16.5px; --fs-main:16px; --fs-sub:14px; --fs-mini:13.5px; }
+  body { background:#FBFAF7; color:#2C2C2A; font-family:"Microsoft YaHei","PingFang SC",sans-serif; font-size:var(--fs-body); line-height:1.75; }
+  .page { max-width:76ch; margin:0 auto; padding:2rem 1.25rem 4rem; }
+  a { color:#854F0B; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .topnav { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px 16px; border-bottom:1px solid #E4DCC8; padding-bottom:10px; margin-bottom:22px; font-size:var(--fs-mini); color:#5F5E5A; }
+  .topnav b { font-weight:500; font-size:var(--fs-sub); color:#2C2C2A; }
+  .panel { background:#F5F1E8; border:1px solid #E4DCC8; border-radius:10px; padding:20px 22px; margin-bottom:26px; }
+  .panel h2, h2.sec { font-size:20px; font-weight:500; color:#2C2C2A; margin-bottom:4px; }
+  h2.sec { margin-top:32px; padding-bottom:6px; border-bottom:1px solid #E4DCC8; }
+  .sec-sub { color:#5F5E5A; font-size:var(--fs-sub); margin-bottom:12px; line-height:1.7; }
+  table { width:100%; border-collapse:collapse; font-size:var(--fs-main); margin:8px 0 4px; }
+  th { text-align:left; background:#EFE9DA; padding:9px 12px; border-bottom:2px solid #E0D5BC; color:#2C2C2A; font-weight:500; }
+  td { padding:9px 12px; border-bottom:1px solid #EDE7DA; vertical-align:top; }
+  td.en { font-family:Georgia,serif; }
+  .badge { display:inline-block; border-radius:4px; padding:1px 7px; font-size:12px; line-height:1.6; font-family:"Microsoft YaHei",sans-serif; white-space:nowrap; margin-left:7px; vertical-align:1px; }
+  .badge.w { background:#FAEEDA; color:#854F0B; }
+  .badge.r { border:1px solid #E4DCC8; color:#8A857C; }
+  details { border:1px solid #E4DCC8; border-radius:8px; padding:10px 14px; margin:8px 0; background:#FDFBF6; }
+  details.summary-box { background:#F5F1E8; }
+  summary { cursor:pointer; font-size:15.5px; color:#2C2C2A; }
+  summary:hover { color:#854F0B; }
+  details[open] summary { margin-bottom:8px; }
+  .prose p { font-family:Georgia,"Microsoft YaHei",serif; font-size:var(--fs-prose); line-height:1.9; margin:0 0 1.2em; }
+  .core { text-decoration:underline; text-decoration-color:#BA7517; text-decoration-thickness:1.5px; text-underline-offset:4px; }
+  .guess { text-decoration:underline dotted; text-decoration-color:#C9A468; text-underline-offset:4px; }
+  .chunk { background:#FDF0CE; border-radius:3px; padding:1px 4px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .gloss { color:#575149; font-size:.84em; font-family:"Microsoft YaHei",sans-serif; }
+  .legend { font-size:var(--fs-mini); color:#5F5E5A; margin:0 0 14px; line-height:1.75; }
+  .count { font-size:var(--fs-mini); color:#8A857C; margin:0 0 6px; }
+  .zh { font-size:var(--fs-main); font-weight:500; color:#2C2C2A; display:flex; align-items:baseline; gap:8px; }
+  .zh span { font-size:13px; color:#8A857C; font-weight:400; }
+  .zone { border:0; border-top:1px solid #E4DCC8; border-radius:0; background:transparent;
+           margin:14px 0 0; padding:11px 0 0; }
+  .zone.first { border-top:none; margin-top:8px; padding-top:0; }
+  .zone > summary.zh { list-style:none; padding:0; margin:0; }
+  .zone > summary.zh::-webkit-details-marker { display:none; }
+  .zone > summary.zh::after { content:"▸"; font-size:11px; color:#8A857C; }
+  .zone[open] > summary.zh::after { content:"▾"; }
+  .rowlist { margin-top:8px; border:1px solid #E4DCC8; border-radius:8px; background:#FDFBF6; overflow:hidden; }
+  .rowlist details { border:none; border-radius:0; margin:0; padding:7px 12px; background:transparent; border-bottom:1px solid #EDE7DA; }
+  .rowlist details:last-child { border-bottom:none; }
+  .rowlist details summary { font-size:15.5px; }
+  .rowlist details summary b { font-family:Georgia,serif; font-weight:400; }
+  .rowlist details summary i { font-style:normal; color:#5F5E5A; font-size:var(--fs-mini); margin-left:8px; }
+  .rowlist details > div { font-size:var(--fs-sub); color:#5F5E5A; padding-top:5px; line-height:1.75; }
+  tr.ckrow td { background:#FDF8EE; }
+  .coglist { font-family:Georgia,serif; font-size:var(--fs-main); color:#5F5E5A; line-height:2.1; }
+  .dp p { font-family:Georgia,"Microsoft YaHei",serif; font-size:18px; line-height:1.85; margin:0 0 1em; }
+  .jw { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:2px 18px; font-size:var(--fs-main); }
+  .jw div { padding:4px 0; border-bottom:1px solid #EDE7DA; }
+  .jw b { font-family:Georgia,serif; font-weight:400; }
+  .footer { border-top:1px solid #E4DCC8; margin-top:36px; padding-top:14px; display:flex; justify-content:space-between; font-size:var(--fs-mini); color:#5F5E5A; }
+  .tip { font-size:var(--fs-sub); color:#5F5E5A; background:#F5F1E8; border-left:3px solid #BA7517; padding:10px 14px; border-radius:0 6px 6px 0; margin:12px 0; line-height:1.75; }
+  .peeklabel { display:inline-block; cursor:pointer; font-size:var(--fs-sub); color:#854F0B; border:1px solid #E4DCC8; border-radius:6px; padding:4px 14px; margin:2px 0 8px; background:#FDFBF6; user-select:none; }
+  .peeklabel:hover { border-color:#BA7517; }
+  #peek { display:none; }
+  #peek:checked ~ table.core td:nth-child(3) { color:transparent; }
+  @media print { body { background:#fff; } .gloss { color:#46423C; } }
+</style>
+</head>
+<body>
+<!--WORD-META
+{"n":1,"t":"Lifestyles Around the World","date":"2026-09-19","stats":{"tokens":146,"lemmas":107,"core":15,"guess":6,"junior":37,"cog":8},"words":[
+{"w":"complex","c":"core","m":"复杂的"},{"w":"factor","c":"core","m":"因素"},{"w":"pace","c":"core","m":"节奏；速度"},{"w":"constant","c":"core","m":"持续的；不断的"},{"w":"resident","c":"core","m":"居民"},{"w":"entertainment","c":"core","m":"娱乐"},{"w":"rural","c":"core","m":"农村的"},{"w":"adopt","c":"core","m":"采取；采纳"},{"w":"moral","c":"core","m":"道德的"},{"w":"leisure","c":"core","m":"闲暇"},{"w":"live (adj.)","c":"core","m":"现场的（音乐等）"},
+{"w":"in contrast","c":"core","k":"discourse","m":"相比之下（对比标志）"},{"w":"range from A to B","c":"core","k":"phrase","m":"从A到B不等"},{"w":"focus on","c":"core","k":"collocation","m":"集中于；把重点放在"},{"w":"center on","c":"core","k":"collocation","m":"以…为中心；围绕"},
+{"w":"lifestyle","c":"guess","m":"生活方式"},{"w":"differ","c":"guess","m":"相异；不同"},{"w":"cottage","c":"guess","m":"小屋；村舍"},{"w":"subway","c":"guess","m":"地铁"},{"w":"extend","c":"guess","m":"延伸；扩展"},{"w":"diverse","c":"guess","m":"多样的"},
+{"w":"activities","c":"junior","m":"活动"},{"w":"apartment","c":"junior","m":"公寓"},{"w":"attending","c":"junior","m":"参加"},{"w":"choice","c":"junior","m":"选择"},{"w":"community","c":"junior","m":"社区"},{"w":"concerts","c":"junior","m":"音乐会"},{"w":"connection","c":"junior","m":"连接"},{"w":"crowded","c":"junior","m":"拥挤的"},{"w":"daily","c":"junior","m":"日常的"},{"w":"diet","c":"junior","m":"日常饮食"},{"w":"differences","c":"junior","m":"差异"},{"w":"enjoy","c":"junior","m":"享受"},{"w":"experience","c":"junior","m":"经历；体验"},{"w":"geography","c":"junior","m":"地理"},{"w":"health","c":"junior","m":"健康"},{"w":"hiking","c":"junior","m":"徒步"},{"w":"history","c":"junior","m":"历史"},{"w":"human","c":"junior","m":"人类"},{"w":"land","c":"junior","m":"土地"},{"w":"life","c":"junior","m":"生活"},{"w":"local","c":"junior","m":"当地的"},{"w":"mountains","c":"junior","m":"山"},{"w":"national","c":"junior","m":"国家的"},{"w":"neighbor","c":"junior","m":"邻居"},{"w":"online","c":"junior","m":"在线的"},{"w":"personal","c":"junior","m":"个人的"},{"w":"practicing","c":"junior","m":"练习"},{"w":"reasons","c":"junior","m":"原因"},{"w":"restaurants","c":"junior","m":"餐馆"},{"w":"rich","c":"junior","m":"丰富的"},{"w":"shaped","c":"junior","m":"塑造"},{"w":"simple","c":"junior","m":"简单的"},{"w":"theater","c":"junior","m":"剧院"},{"w":"understanding","c":"junior","m":"理解"},{"w":"usually","c":"junior","m":"通常"},{"w":"video","c":"junior","m":"视频"},{"w":"village","c":"junior","m":"村庄"},
+{"w":"economics","c":"cog","m":"经济学"},{"w":"rhythm","c":"cog","m":"节奏"},{"w":"vegetarian","c":"cog","m":"素食的"},{"w":"agriculture","c":"cog","m":"农业"},{"w":"yoga","c":"cog","m":"瑜伽"},{"w":"various","c":"cog","m":"各种各样的"},{"w":"appreciate","c":"cog","m":"欣赏；领会"},{"w":"variety","c":"cog","m":"多样性"}
+]}
+-->
+<div class="page">
+
+<div class="topnav">
+  <b>1 · Lifestyles Around the World</b>
+  <span><a href="#panorama">生词全景</a> · <a href="#original">原文</a> · <a href="#derivatives">衍生文</a> ｜ <a href="ABCmap.html">ABCmap 词汇地图</a></span>
+</div>
+
+<div class="panel" id="panorama">
+  <h2>生词全景</h2>
+  <div class="sec-sub">四层判定：功能词与小学词默认已掌握（不列）｜初中词进「基础词自查」｜超纲词才分核心必背 / 可猜 / 认知。</div>
+
+  <div class="count">共 66 条 · 核心 15（含语块 4）· 可猜 6 · 基础词 37 · 认知 8</div>
+
+  <div class="zone first">
+    <div class="zh">① 核心必背 <span>15</span></div>
+    <div class="sec-sub" style="margin-top:4px;">超纲、不查就读不懂、值得背。<b>浅底的行是语块</b>——整块记，别逐词拆。读完原文后遮住释义自查。</div>
+    <input type="checkbox" id="peek">
+    <label for="peek" class="peeklabel">遮住「释义」列自查（点击切换）</label>
+    <table class="core">
+    <tr><th style="width:27%;">条目</th><th style="width:17%;">类型</th><th>释义</th></tr>
+    <tr><td class="en">complex<span class="badge r">阅读</span></td><td>单词 · adj.</td><td>复杂的</td></tr>
+    <tr><td class="en">factor<span class="badge w">写作</span></td><td>单词 · n.</td><td>因素（fact 事实 + -or → 构成事实的要素）</td></tr>
+    <tr><td class="en">pace<span class="badge w">写作</span></td><td>单词 · n.</td><td>节奏；速度（at a fast pace 快节奏）</td></tr>
+    <tr><td class="en">constant<span class="badge r">阅读</span></td><td>单词 · adj.</td><td>持续的；不断的</td></tr>
+    <tr><td class="en">resident<span class="badge r">阅读</span></td><td>单词 · n.</td><td>居民（-ent 表人）</td></tr>
+    <tr><td class="en">entertainment<span class="badge r">阅读</span></td><td>单词 · n.</td><td>娱乐（entertain + -ment）</td></tr>
+    <tr><td class="en">rural<span class="badge w">写作</span></td><td>单词 · adj.</td><td>农村的（反义：urban 城市的）</td></tr>
+    <tr><td class="en">adopt<span class="badge w">写作</span></td><td>单词 · v.</td><td>采取；采纳（adopt a diet；易混 adapt 适应）</td></tr>
+    <tr><td class="en">moral<span class="badge r">阅读</span></td><td>单词 · adj.</td><td>道德的（moral reasons 道德原因）</td></tr>
+    <tr><td class="en">leisure<span class="badge r">阅读</span></td><td>单词 · n.</td><td>闲暇（leisure activities 休闲活动）</td></tr>
+    <tr><td class="en">live<span class="badge r">阅读</span></td><td>单词 · adj.（多义）</td><td>现场的（live music 现场音乐）</td></tr>
+    <tr class="ckrow"><td class="en">in contrast<span class="badge w">写作</span></td><td>语篇标记</td><td>相比之下——提示下文与前文相反</td></tr>
+    <tr class="ckrow"><td class="en">range from A to B<span class="badge w">写作</span></td><td>句式框架</td><td>（范围）从 A 到 B 不等</td></tr>
+    <tr class="ckrow"><td class="en">focus on<span class="badge w">写作</span></td><td>搭配</td><td>集中于；把重点放在（focus on agriculture）</td></tr>
+    <tr class="ckrow"><td class="en">center on<span class="badge r">阅读</span></td><td>搭配</td><td>以…为中心；围绕（daily life centers on family）</td></tr>
+  </table>
+  </div>
+
+  <details class="zone">
+    <summary class="zh">② 可猜词 <span>6</span> · 先猜再展开</summary>
+    <div class="sec-sub" style="margin-top:6px;">超纲但能靠词根、合成、上下文推出来——先猜 10 秒，猜不出再展开。</div>
+    <div class="rowlist">
+      <details><summary><b>lifestyle</b><i>合成词：life（生活）+ style（样式）</i></summary><div>本文义：生活方式。两个熟词拼一起，意思基本就是两义相加。</div></details>
+      <details><summary><b>differ</b><i>你认识 different / difference，去掉形容词后缀呢？</i></summary><div>本文义：相异；不同。different 是「不同的」，differ 是动词「不同」。</div></details>
+      <details><summary><b>cottage</b><i>上下文：rural village 山村里的 simple ___，人住在里面</i></summary><div>本文义：小屋；村舍。推不出精确义没关系，知道是「简朴的住处」就够读懂。</div></details>
+      <details><summary><b>subway</b><i>词根：sub-（在下）+ way（路）→ 什么路在下面？</i></summary><div>本文义：地铁。sub- 家族还有 submarine（潜水艇，在海底的）。</div></details>
+      <details><summary><b>extend</b><i>词根：ex-（向外）+ tend（伸展）</i></summary><div>本文义：延伸；扩展。Lifestyle choices also extend to diet. 也「延伸到」饮食。</div></details>
+      <details><summary><b>diverse</b><i>词根：di-（分开）+ verse（转）→ 各转向不同方向</i></summary><div>本文义：多样的；丰富的。与 different 同源：转开 → 不一样。</div></details>
+    </div>
+  </details>
+
+  <details class="zone">
+    <summary class="zh">③ 基础词自查 <span>37</span> · 认识就过</summary>
+    <div class="sec-sub" style="margin-top:6px;">初中新增词，<b>不要求背</b>——扫 30 秒，认识就过；哪个真不认识，自己心里记一下。它们在原文里不再单独标注。</div>
+    <div class="jw" style="margin-top:8px;">
+      <div><b>activities</b> 活动</div>
+      <div><b>apartment</b> 公寓</div>
+      <div><b>attending</b> 参加</div>
+      <div><b>choice</b> 选择</div>
+      <div><b>community</b> 社区</div>
+      <div><b>concerts</b> 音乐会</div>
+      <div><b>connection</b> 连接</div>
+      <div><b>crowded</b> 拥挤的</div>
+      <div><b>daily</b> 日常的</div>
+      <div><b>diet</b> 日常饮食</div>
+      <div><b>differences</b> 差异</div>
+      <div><b>enjoy</b> 享受</div>
+      <div><b>experience</b> 经历；体验</div>
+      <div><b>geography</b> 地理</div>
+      <div><b>health</b> 健康</div>
+      <div><b>hiking</b> 徒步</div>
+      <div><b>history</b> 历史</div>
+      <div><b>human</b> 人类</div>
+      <div><b>land</b> 土地</div>
+      <div><b>life</b> 生活</div>
+      <div><b>local</b> 当地的</div>
+      <div><b>mountains</b> 山</div>
+      <div><b>national</b> 国家的</div>
+      <div><b>neighbor</b> 邻居</div>
+      <div><b>online</b> 在线的</div>
+      <div><b>personal</b> 个人的</div>
+      <div><b>practicing</b> 练习</div>
+      <div><b>reasons</b> 原因</div>
+      <div><b>restaurants</b> 餐馆</div>
+      <div><b>rich</b> 丰富的</div>
+      <div><b>shaped</b> 塑造</div>
+      <div><b>simple</b> 简单的</div>
+      <div><b>theater</b> 剧院</div>
+      <div><b>understanding</b> 理解</div>
+      <div><b>usually</b> 通常</div>
+      <div><b>video</b> 视频</div>
+      <div><b>village</b> 村庄</div>
+    </div>
+  </details>
+
+  <details class="zone">
+    <summary class="zh">④ 认知词 <span>8</span> · 释义只在原文</summary>
+    <div class="sec-sub" style="margin-top:6px;">专名、学科词、低频词。不建表，义以灰色小字标在原文首现处，滑过即可。</div>
+    <div class="coglist" style="margin-top:6px;">economics · rhythm · vegetarian · agriculture · yoga · various · appreciate · variety</div>
+  </details>
+
+  <div class="tip">两遍阅读法：第一遍不查词先抓大意，第二遍对照核心表与自查区解决卡点。语块按整块记，别逐词拆。</div>
+</div>
+
+<h2 class="sec" id="original">原文</h2>
+<p class="legend">实线下划线＝核心单词｜浅底纹＝语块（整块记，别逐词拆）｜虚线＝可猜词（先猜）｜灰色小字＝认知词（直接看，不用记）｜初中新增词不再单独标注，义在上方自查区</p>
+
+<div class="prose">
+  <p>People's <span class="guess">lifestyles</span> <span class="guess">differ</span> greatly around the world. These differences are shaped by many <span class="core">complex</span> <span class="core">factors</span> such as geography, history, <span class="gloss">economics（经济学）</span>, and personal choice.</p>
+  <p>In busy cities like Shanghai or Beijing, people usually live life at a fast <span class="core">pace</span>, with long working hours and <span class="core">constant</span> online connection. <span class="core">Residents</span> live in apartments, take crowded <span class="guess">subways</span>, and enjoy themselves in many restaurants, theaters and <span class="core">entertainment</span> places.</p>
+  <p><span class="chunk">In contrast</span>, life in a <span class="core">rural</span> village in the mountains may <span class="chunk">focus on</span> <span class="gloss">agriculture（农业）</span>, community, and a slower, more seasonal <span class="gloss">rhythm（节奏）</span>. People usually live in simple <span class="guess">cottages</span>, and their daily life <span class="chunk">centers on</span> family, neighbors and the land.</p>
+  <p>Lifestyle choices also <span class="guess">extend</span> to diet. Some <span class="core">adopt</span> a <span class="gloss">vegetarian（素食的）</span> diet for <span class="core">moral</span> or health reasons, while others enjoy a <span class="guess">diverse</span> diet with local meats and vegetables. <span class="core">Leisure</span> activities <span class="chunk">range from</span> hiking in national parks to practicing <span class="gloss">yoga（瑜伽）</span>, playing video games, or attending <span class="core">live</span> music concerts.</p>
+  <p>Understanding these <span class="gloss">various（各种各样的）</span> lifestyles helps us <span class="gloss">appreciate（欣赏；领会）</span> the rich <span class="gloss">variety（多样性）</span> of the human experience.</p>
+</div>
+
+<h2 class="sec" id="derivatives">衍生文</h2>
+<p class="legend">两篇短文只用本学过的词（含前几篇的），反复遇到才是记住的开始。核心单词划线重现、语块浅底重现、可猜词虚线重现；初中新增词与认知词第二遍不再给义。</p>
+
+<details class="summary-box"><summary>衍生文 · 简单篇 —— 当天读完原文后打开</summary>
+  <div class="sec-sub">同话题邻场景，句子更短。</div>
+  <div class="dp">
+    <p><b>My City Week and My Village Weekend</b></p>
+    <p>I am a <span class="core">resident</span> of Shanghai. My cousin lives in a <span class="core">rural</span> village in the mountains, and our <span class="guess">lifestyles</span> <span class="guess">differ</span> greatly. My city life runs at a fast <span class="core">pace</span>: every morning I take a crowded <span class="guess">subway</span> to work; every evening my phone keeps me in <span class="core">constant</span> online connection with the office. On weekends, my <span class="core">leisure</span> choices <span class="chunk">range from</span> video games to <span class="core">live</span> music concerts — the <span class="core">entertainment</span> never stops.</p>
+    <p><span class="chunk">In contrast</span>, my cousin's life has a slower rhythm. He lives in a simple <span class="guess">cottage</span>, and his whole day <span class="chunk">centers on</span> the farm and his family. His diet is simple: local vegetables and a little meat. He thinks my lifestyle is too <span class="core">complex</span>. Maybe he is right. A good life does not need many <span class="core">factors</span> — you just <span class="chunk">focus on</span> family, health, and the community around you.</p>
+  </div>
+  <p class="legend">复现覆盖：核心单词 9/11 · 语块 4/4 · 可猜 4/6</p>
+</details>
+
+<details class="summary-box"><summary>衍生文 · 稍难篇 —— 隔天再打开，检验你还记得多少</summary>
+  <div class="sec-sub">换话题、换体裁（说明 → 议论），句子结构加难，但不引入新的生词。</div>
+  <div class="dp">
+    <p><b>Choosing How We Live</b></p>
+    <p>Modern technology has quietly changed the <span class="core">pace</span> of daily life. While our grandparents' days were shaped by the seasons, ours are shaped by screens: a <span class="core">constant</span> flow of messages, <span class="core">entertainment</span> and online activities leaves us little time for rest. For this reason, many people have begun to <span class="core">adopt</span> a "slow" <span class="guess">lifestyle</span>. They <span class="chunk">focus on</span> enjoying less rather than having more.</p>
+    <p><span class="chunk">In contrast</span> to those who fill every hour with <span class="core">leisure</span> activities that <span class="chunk">range from</span> attending <span class="core">live</span> music concerts to playing video games, slow-life followers prefer <span class="guess">diverse</span> simple pleasures: a long walk, a home-cooked meal, a quiet evening with the community they love. Their choices even <span class="guess">extend</span> to diet — some <span class="core">adopt</span> a vegetarian one for <span class="core">moral</span> or health reasons — because they believe a good life does not depend on <span class="core">complex</span> <span class="core">factors</span>, but on the rhythm each of us chooses.</p>
+  </div>
+  <p class="legend">复现覆盖：核心单词 9/11 · 语块 3/4 · 可猜 3/6 ｜ 两篇合计：核心 15/15（含语块 4/4）· 可猜 6/6 全覆盖</p>
+</details>
+
+<div class="footer">
+  <span>上一篇：无（这是第 1 篇）</span>
+  <span>下一篇：<a href="2.html">2 · The Way We Shop</a> ｜ 返回 <a href="ABCmap.html">ABCmap 词汇地图</a></span>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 · Choosing a Career Path</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  /* 字号标尺：整体放大/缩小只改这 5 个值。原文 19px 是舒适基准，其余向它靠 */
+  :root { --fs-prose:19px; --fs-body:16.5px; --fs-main:16px; --fs-sub:14px; --fs-mini:13.5px; }
+  body { background:#FBFAF7; color:#2C2C2A; font-family:"Microsoft YaHei","PingFang SC",sans-serif; font-size:var(--fs-body); line-height:1.75; }
+  .page { max-width:76ch; margin:0 auto; padding:2rem 1.25rem 4rem; }
+  a { color:#854F0B; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .topnav { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:4px 16px; border-bottom:1px solid #E4DCC8; padding-bottom:10px; margin-bottom:22px; font-size:var(--fs-mini); color:#5F5E5A; }
+  .topnav b { font-weight:500; font-size:var(--fs-sub); color:#2C2C2A; }
+  .panel { background:#F5F1E8; border:1px solid #E4DCC8; border-radius:10px; padding:20px 22px; margin-bottom:26px; }
+  .panel h2, h2.sec { font-size:20px; font-weight:500; color:#2C2C2A; margin-bottom:4px; }
+  h2.sec { margin-top:32px; padding-bottom:6px; border-bottom:1px solid #E4DCC8; }
+  .sec-sub { color:#5F5E5A; font-size:var(--fs-sub); margin-bottom:12px; line-height:1.7; }
+  table { width:100%; border-collapse:collapse; font-size:var(--fs-main); margin:8px 0 4px; }
+  th { text-align:left; background:#EFE9DA; padding:9px 12px; border-bottom:2px solid #E0D5BC; color:#2C2C2A; font-weight:500; }
+  td { padding:9px 12px; border-bottom:1px solid #EDE7DA; vertical-align:top; }
+  td.en { font-family:Georgia,serif; }
+  .badge { display:inline-block; border-radius:4px; padding:1px 7px; font-size:12px; line-height:1.6; font-family:"Microsoft YaHei",sans-serif; white-space:nowrap; margin-left:7px; vertical-align:1px; }
+  .badge.w { background:#FAEEDA; color:#854F0B; }
+  .badge.r { border:1px solid #E4DCC8; color:#8A857C; }
+  .badge.u { background:#EFE9DA; color:#5F5E5A; }
+  details { border:1px solid #E4DCC8; border-radius:8px; padding:10px 14px; margin:8px 0; background:#FDFBF6; }
+  details.summary-box { background:#F5F1E8; }
+  summary { cursor:pointer; font-size:15.5px; color:#2C2C2A; }
+  summary:hover { color:#854F0B; }
+  details[open] summary { margin-bottom:8px; }
+  .prose p { font-family:Georgia,"Microsoft YaHei",serif; font-size:var(--fs-prose); line-height:1.9; margin:0 0 1.2em; }
+  .core { text-decoration:underline; text-decoration-color:#BA7517; text-decoration-thickness:1.5px; text-underline-offset:4px; }
+  .guess { text-decoration:underline dotted; text-decoration-color:#C9A468; text-underline-offset:4px; }
+  .chunk { background:#FDF0CE; border-radius:3px; padding:1px 4px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  .gloss { color:#575149; font-size:.84em; font-family:"Microsoft YaHei",sans-serif; }
+  .legend { font-size:var(--fs-mini); color:#5F5E5A; margin:0 0 14px; line-height:1.75; }
+  .count { font-size:var(--fs-mini); color:#8A857C; margin:0 0 6px; }
+  .zh { font-size:var(--fs-main); font-weight:500; color:#2C2C2A; display:flex; align-items:baseline; gap:8px; }
+  .zh span { font-size:13px; color:#8A857C; font-weight:400; }
+  .zone { border:0; border-top:1px solid #E4DCC8; border-radius:0; background:transparent;
+           margin:14px 0 0; padding:11px 0 0; }
+  .zone.first { border-top:none; margin-top:8px; padding-top:0; }
+  .zone > summary.zh { list-style:none; padding:0; margin:0; }
+  .zone > summary.zh::-webkit-details-marker { display:none; }
+  .zone > summary.zh::after { content:"▸"; font-size:11px; color:#8A857C; }
+  .zone[open] > summary.zh::after { content:"▾"; }
+  .rowlist { margin-top:8px; border:1px solid #E4DCC8; border-radius:8px; background:#FDFBF6; overflow:hidden; }
+  .rowlist details { border:none; border-radius:0; margin:0; padding:7px 12px; background:transparent; border-bottom:1px solid #EDE7DA; }
+  .rowlist details:last-child { border-bottom:none; }
+  .rowlist details summary { font-size:15.5px; }
+  .rowlist details summary b { font-family:Georgia,serif; font-weight:400; }
+  .rowlist details summary i { font-style:normal; color:#5F5E5A; font-size:var(--fs-mini); margin-left:8px; }
+  .rowlist details > div { font-size:var(--fs-sub); color:#5F5E5A; padding-top:5px; line-height:1.75; }
+  tr.ckrow td { background:#FDF8EE; }
+  tr.note td { background:#F5F1E8; color:#5F5E5A; font-size:var(--fs-sub); padding:7px 12px; }
+  .coglist { font-family:Georgia,serif; font-size:var(--fs-main); color:#5F5E5A; line-height:2.1; }
+  .dp p { font-family:Georgia,"Microsoft YaHei",serif; font-size:18px; line-height:1.85; margin:0 0 1em; }
+  .jw { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:2px 18px; font-size:var(--fs-main); }
+  .jw div { padding:4px 0; border-bottom:1px solid #EDE7DA; }
+  .jw b { font-family:Georgia,serif; font-weight:400; }
+  .footer { border-top:1px solid #E4DCC8; margin-top:36px; padding-top:14px; display:flex; justify-content:space-between; font-size:var(--fs-mini); color:#5F5E5A; }
+  .tip { font-size:var(--fs-sub); color:#5F5E5A; background:#F5F1E8; border-left:3px solid #BA7517; padding:10px 14px; border-radius:0 6px 6px 0; margin:12px 0; line-height:1.75; }
+  .peeklabel { display:inline-block; cursor:pointer; font-size:var(--fs-sub); color:#854F0B; border:1px solid #E4DCC8; border-radius:6px; padding:4px 14px; margin:2px 0 8px; background:#FDFBF6; user-select:none; }
+  .peeklabel:hover { border-color:#BA7517; }
+  #peek { display:none; }
+  #peek:checked ~ table.core td:nth-child(3) { color:transparent; }
+  @media print { body { background:#fff; } .gloss { color:#46423C; } }
+</style>
+</head>
+<body>
+<!--WORD-META
+{"n":5,"t":"Choosing a Career Path","date":"2026-09-21","stats":{"tokens":163,"lemmas":117,"core":18,"guess":5,"junior":32,"cog":11},"words":[
+{"w":"career","c":"core","m":"职业生涯；事业"},{"w":"path","c":"core","m":"道路；路径"},{"w":"significant","c":"core","m":"重大的；重要的"},{"w":"assess","c":"core","m":"评估；衡量"},{"w":"potential","c":"core","m":"潜在的；潜力"},{"w":"thrive","c":"core","m":"茁壮成长；蓬勃向上"},{"w":"process","c":"core","m":"过程；进程"},{"w":"gain","c":"core","m":"获得；取得"},{"w":"entire","c":"core","m":"整个的；全部的"},{"w":"professional","c":"core","m":"职业的；专业的"},{"w":"throughout","c":"core","m":"贯穿；在整个…期间"},{"w":"vast","c":"core","m":"广阔的；巨大的"},
+{"w":"be passionate about","c":"core","k":"collocation","m":"对…充满热情"},{"w":"be open to","c":"core","k":"collocation","m":"对…持开放态度"},{"w":"be key to","c":"core","k":"collocation","m":"是…的关键"},{"w":"whether A or B","c":"core","k":"phrase","m":"无论A还是B"},{"w":"one of the most …","c":"core","k":"phrase","m":"最…的之一（后面接复数名词）"},{"w":"a network of contacts","c":"core","k":"collocation","m":"人脉网络；关系网"},
+{"w":"decisions","c":"guess","m":"决定"},{"w":"possibilities","c":"guess","m":"可能性"},{"w":"continuously","c":"guess","m":"不断地；持续地"},{"w":"long-term","c":"guess","m":"长期的"},{"w":"planning","c":"guess","m":"规划"},
+{"w":"choose","c":"junior","m":"选择"},{"w":"person","c":"junior","m":"人"},{"w":"life","c":"junior","m":"生活；人生"},{"w":"journey","c":"junior","m":"旅程"},{"w":"require","c":"junior","m":"需要；要求"},{"w":"research","c":"junior","m":"研究；调研"},{"w":"step","c":"junior","m":"步骤"},{"w":"own","c":"junior","m":"自己的"},{"w":"interest","c":"junior","m":"兴趣"},{"w":"skill","c":"junior","m":"技能"},{"w":"value","c":"junior","m":"价值；价值观"},{"w":"nature","c":"junior","m":"天性；自然"},{"w":"environment","c":"junior","m":"环境"},{"w":"reduce","c":"junior","m":"减少；缩小"},{"w":"field","c":"junior","m":"领域；范围"},{"w":"important","c":"junior","m":"重要的"},{"w":"practice","c":"junior","m":"实践；练习"},{"w":"experience","c":"junior","m":"经验；经历"},{"w":"volunteer","c":"junior","m":"志愿者；志愿的"},{"w":"provide","c":"junior","m":"提供"},{"w":"industry","c":"junior","m":"行业；产业"},{"w":"develop","c":"junior","m":"发展；培养"},{"w":"build","c":"junior","m":"建立"},{"w":"form","c":"junior","m":"形式"},{"w":"university","c":"junior","m":"大学"},{"w":"degree","c":"junior","m":"学位"},{"w":"knowledge","c":"junior","m":"知识"},{"w":"change","c":"junior","m":"改变；变化"},{"w":"several","c":"junior","m":"几个；若干"},{"w":"stay","c":"junior","m":"停留；保持"},{"w":"remain","c":"junior","m":"保持；仍然是"},{"w":"success","c":"junior","m":"成功"},
+{"w":"linear","c":"cog","m":"线性的；直线的"},{"w":"self-reflection","c":"cog","m":"自我反思"},{"w":"foundational","c":"cog","m":"基础的"},{"w":"qualifications","c":"cog","m":"资格；学历"},{"w":"internships","c":"cog","m":"实习"},{"w":"adaptable","c":"cog","m":"适应性强的"},{"w":"fulfillment","c":"cog","m":"满足感；成就感"},{"w":"determined","c":"cog","m":"确定的；已决定的"},{"w":"invaluable","c":"cog","m":"极其宝贵的"},{"w":"vocational","c":"cog","m":"职业的（技能培训类）"},{"w":"profession","c":"cog","m":"职业（专业性工作）"}
+]}
+-->
+<div class="page">
+
+<div class="topnav">
+  <b>5 · Choosing a Career Path</b>
+  <span><a href="#panorama">生词全景</a> · <a href="#original">原文</a> · <a href="#derivatives">衍生文</a> ｜ <a href="ABCmap.html">ABCmap 词汇地图</a></span>
+</div>
+
+<div class="panel" id="panorama">
+  <h2>生词全景</h2>
+  <div class="sec-sub">四层判定：功能词与小学词默认已掌握（不列）｜初中新增词进「基础词自查」｜超纲词才分核心必背 / 可猜 / 认知。</div>
+
+  <div class="count">共 66 条 · 核心 18（含语块 6）· 可猜 5 · 基础词 32 · 认知 11</div>
+
+  <div class="zone first">
+    <div class="zh">① 核心必背 <span>18 · 另有前几篇学过的旧词 1 条见表末</span></div>
+    <div class="sec-sub" style="margin-top:4px;">超纲、不查就读不懂、值得背。<b>浅底的行是语块</b>——整块记，别逐词拆。读完原文后遮住释义自查。</div>
+    <input type="checkbox" id="peek">
+    <label for="peek" class="peeklabel">遮住「释义」列自查（点击切换）</label>
+    <table class="core">
+    <tr><th style="width:27%;">条目</th><th style="width:17%;">类型</th><th>释义</th></tr>
+    <tr><td class="en">career<span class="badge r">阅读</span></td><td>单词 · n.</td><td>职业生涯；事业（a career path 职业道路）</td></tr>
+    <tr><td class="en">path<span class="badge r">阅读</span></td><td>单词 · n.</td><td>道路；路径（a career path 职业生涯这条路）</td></tr>
+    <tr><td class="en">significant<span class="badge w">写作</span></td><td>单词 · adj.</td><td>重大的；重要的（one of the most significant decisions 最重要的决定之一）</td></tr>
+    <tr><td class="en">assess<span class="badge r">阅读</span></td><td>单词 · v.</td><td>评估；衡量（assess your interests 评估自己的兴趣）</td></tr>
+    <tr><td class="en">potential<span class="badge w">写作</span></td><td>单词 · adj./n.</td><td>潜在的；潜力（potential careers 可能适合的职业）</td></tr>
+    <tr><td class="en">thrive<span class="badge r">阅读</span></td><td>单词 · v.</td><td>茁壮成长；蓬勃向上（thrive in a work environment 在某种环境里如鱼得水）</td></tr>
+    <tr><td class="en">process<span class="badge r">阅读</span></td><td>单词 · n.</td><td>过程；进程（a linear process 一条直线走到底的过程）</td></tr>
+    <tr><td class="en">gain<span class="badge w">写作</span></td><td>单词 · v.</td><td>获得；取得（gain experience 积累经验）</td></tr>
+    <tr><td class="en">entire<span class="badge r">阅读</span></td><td>单词 · adj.</td><td>整个的；全部的（change entire careers 把整个职业都换掉）</td></tr>
+    <tr><td class="en">professional<span class="badge w">写作</span></td><td>单词 · adj.</td><td>职业的；专业的（professional skills 职业技能）</td></tr>
+    <tr><td class="en">throughout<span class="badge r">阅读</span></td><td>单词 · prep.</td><td>贯穿；在整个…期间（throughout their lives 在他们一生中）</td></tr>
+    <tr><td class="en">vast<span class="badge r">阅读</span></td><td>单词 · adj.</td><td>广阔的；巨大的（the vast field of possibilities 茫茫多的可能性）<br>第 3 篇作认知词出现过，本篇升为必背</td></tr>
+    <tr class="ckrow"><td class="en">be passionate about<span class="badge w">写作</span></td><td>搭配</td><td>对…充满热情（What are you passionate about? 你对什么有热情？）</td></tr>
+    <tr class="ckrow"><td class="en">be open to<span class="badge w">写作</span></td><td>搭配</td><td>对…持开放态度（open to new opportunities 对新的机会不排斥）</td></tr>
+    <tr class="ckrow"><td class="en">be key to<span class="badge w">写作</span></td><td>搭配</td><td>是…的关键（is key to long-term success 是长期成功的关键）</td></tr>
+    <tr class="ckrow"><td class="en">whether A or B<span class="badge w">写作</span></td><td>句式框架</td><td>无论 A 还是 B（whether through university or vocational training 无论走大学还是职业培训）</td></tr>
+    <tr class="ckrow"><td class="en">one of the most …<span class="badge w">写作</span></td><td>句式框架</td><td>最…的之一——后面必须接<b>复数</b>名词（one of the most significant decisions）</td></tr>
+    <tr class="ckrow"><td class="en">a network of contacts<span class="badge r">阅读</span></td><td>搭配</td><td>人脉网络；关系网（build a network of contacts 建立人脉）</td></tr>
+    <tr class="note"><td colspan="3">以下 1 条是前几篇学过、本篇又遇到的旧词——遮住释义自查，想不起来再回头看那一篇，本篇不重教。</td></tr>
+    <tr><td class="en">opportunity<span class="badge u">第 2 篇</span></td><td>旧词重现 · n.</td><td>机会</td></tr>
+  </table>
+  </div>
+
+  <details class="zone">
+    <summary class="zh">② 可猜词 <span>5</span> · 先猜再展开</summary>
+    <div class="sec-sub" style="margin-top:6px;">超纲但能靠词根、合成、上下文推出来——先猜 10 秒，猜不出再展开。</div>
+    <div class="rowlist">
+      <details><summary><b>decisions</b><i>decide（决定）+ -ion（名词后缀，注意去掉词尾的 e）</i></summary><div>本文义：决定。one of the most significant decisions 最重要的决定之一。</div></details>
+      <details><summary><b>possibilities</b><i>possible（可能的）+ -ity（名词后缀）</i></summary><div>本文义：可能性。the vast field of possibilities 茫茫多的可能性。</div></details>
+      <details><summary><b>continuously</b><i>continue（继续）+ -ous + -ly（副词后缀）</i></summary><div>本文义：不断地；持续地。continuously learning new skills 不断学新技能。</div></details>
+      <details><summary><b>long-term</b><i>long（长的）+ term（期限）</i></summary><div>本文义：长期的。long-term success 长期的成功。反义：short-term 短期的。</div></details>
+      <details><summary><b>planning</b><i>plan（计划）+ -ing（这里作名词）</i></summary><div>本文义：规划。research and planning 调研与规划。</div></details>
+    </div>
+  </details>
+
+  <details class="zone">
+    <summary class="zh">③ 基础词自查 <span>32</span> · 认识就过</summary>
+    <div class="sec-sub" style="margin-top:6px;">初中新增词，<b>不要求背</b>——扫 30 秒，认识就过；哪个真不认识，自己心里记一下。它们在原文里不再单独标注。</div>
+    <div class="jw" style="margin-top:8px;">
+      <div><b>choose</b> 选择</div>
+      <div><b>person</b> 人</div>
+      <div><b>life</b> 生活；人生</div>
+      <div><b>journey</b> 旅程</div>
+      <div><b>require</b> 需要；要求</div>
+      <div><b>research</b> 研究；调研</div>
+      <div><b>step</b> 步骤</div>
+      <div><b>own</b> 自己的</div>
+      <div><b>interest</b> 兴趣</div>
+      <div><b>skill</b> 技能</div>
+      <div><b>value</b> 价值；价值观</div>
+      <div><b>nature</b> 天性；自然</div>
+      <div><b>environment</b> 环境</div>
+      <div><b>reduce</b> 减少；缩小</div>
+      <div><b>field</b> 领域；范围</div>
+      <div><b>important</b> 重要的</div>
+      <div><b>practice</b> 实践；练习</div>
+      <div><b>experience</b> 经验；经历</div>
+      <div><b>volunteer</b> 志愿者；志愿的</div>
+      <div><b>provide</b> 提供</div>
+      <div><b>industry</b> 行业；产业</div>
+      <div><b>develop</b> 发展；培养</div>
+      <div><b>build</b> 建立</div>
+      <div><b>form</b> 形式</div>
+      <div><b>university</b> 大学</div>
+      <div><b>degree</b> 学位</div>
+      <div><b>knowledge</b> 知识</div>
+      <div><b>change</b> 改变；变化</div>
+      <div><b>several</b> 几个；若干</div>
+      <div><b>stay</b> 停留；保持</div>
+      <div><b>remain</b> 保持；仍然是</div>
+      <div><b>success</b> 成功</div>
+    </div>
+  </details>
+
+  <details class="zone">
+    <summary class="zh">④ 认知词 <span>11</span> · 释义只在原文</summary>
+    <div class="sec-sub" style="margin-top:6px;">低频词与领域词。不建表，义以灰色小字标在原文首现处，滑过即可。</div>
+    <div class="coglist" style="margin-top:6px;">linear · self-reflection · foundational · qualifications · internships · adaptable · fulfillment · determined · invaluable · vocational · profession</div>
+  </details>
+
+  <div class="tip">两遍阅读法：第一遍不查词先抓大意，第二遍对照核心表与自查区解决卡点。语块按整块记，别逐词拆。</div>
+</div>
+
+<h2 class="sec" id="original">原文</h2>
+<p class="legend">实线下划线＝核心单词｜浅底纹＝语块（整块记，别逐词拆）｜虚线＝可猜词（先猜）｜灰色小字＝认知词（直接看，不用记）｜初中新增词不再单独标注，义在上方自查区</p>
+
+<div class="prose">
+  <p>Choosing a <span class="core">career</span> <span class="core">path</span> is <span class="chunk">one of the most</span> <span class="core">significant</span> <span class="guess">decisions</span> a person makes in their life.</p>
+  <p>It is a journey that requires careful <span class="gloss">self-reflection（自我反思）</span>, research, and <span class="guess">planning</span>.</p>
+  <p>The first step is often to <span class="core">assess</span> one's own interests, skills, and values.</p>
+  <p>What are you <span class="chunk">passionate about</span>?</p>
+  <p>What are you naturally good at?</p>
+  <p>What kind of work environment do you <span class="core">thrive</span> in?</p>
+  <p>Answering these questions can help reduce the <span class="core">vast</span> field of <span class="guess">possibilities</span>.</p>
+  <p>Once you have <span class="gloss">determined（确定的；已决定的）</span> <span class="core">potential</span> careers, it is important to <span class="core">gain</span> practical experience.</p>
+  <p><span class="gloss">Internships（实习）</span> and volunteer work provide <span class="gloss">invaluable（极其宝贵的）</span> opportunities to learn about an industry, develop <span class="core">professional</span> skills, and build <span class="chunk">a network of contacts</span>.</p>
+  <p>Formal education, <span class="chunk">whether</span> through university degrees <span class="chunk">or</span> <span class="gloss">vocational（职业的；技能培训类的）</span> training, provides the <span class="gloss">foundational（基础的）</span> knowledge and <span class="gloss">qualifications（资格；学历）</span> required for many <span class="gloss">professions（职业）</span>.</p>
+  <p>Career development is not a <span class="gloss">linear（线性的）</span> <span class="core">process</span>.</p>
+  <p>People may change jobs or <span class="core">entire</span> careers several times <span class="core">throughout</span> their lives.</p>
+  <p>Staying <span class="gloss">adaptable（适应性强的）</span>, <span class="guess">continuously</span> learning new skills, and remaining <span class="chunk">open to</span> new <span class="core">opportunities</span> are <span class="chunk">key to</span> <span class="guess">long-term</span> success and <span class="gloss">fulfillment（满足感；成就感）</span>.</p>
+</div>
+
+<h2 class="sec" id="derivatives">衍生文</h2>
+<p class="legend">两篇短文只用学过的词（含前几篇的），反复遇到才是记住的开始。核心单词划线重现、语块浅底重现、可猜词虚线重现；初中新增词与认知词第二遍不再给义。</p>
+
+<details class="summary-box"><summary>衍生文 · 简单篇 —— 当天读完原文后打开</summary>
+  <div class="sec-sub">同话题邻场景（我选第一份工作），句子更短。</div>
+  <div class="dp">
+    <p><b>How I Chose My First Job</b></p>
+    <p>Last year I had to choose a <span class="core">career</span> <span class="core">path</span>, and it was <span class="chunk">one of the most</span> difficult <span class="guess">decisions</span> of my life. First I asked myself: what am I <span class="chunk">passionate about</span>? What am I naturally good at? I wrote the answers down, and the list of <span class="guess">possibilities</span> became shorter.</p>
+    <p>I did not want to guess, so I talked to people who already do the work I want. That was my <span class="guess">planning</span>. I asked them what a normal day looks like, and what makes a person <span class="core">thrive</span> in that job.</p>
+    <p>In July I did an internship in a small office. I <span class="core">gained</span> more in six weeks there than in a year of classes. It was not about money: it was about <span class="core">professional</span> skills and <span class="chunk">a network of contacts</span>.</p>
+    <p>My next step is to <span class="core">assess</span> one more <span class="core">potential</span> choice: a bigger company. I am still not sure — but now I know how to look.</p>
+  </div>
+  <p class="legend">复现覆盖：核心单词 6/12 · 语块 3/6 · 可猜 3/5</p>
+</details>
+
+<details class="summary-box"><summary>衍生文 · 稍难篇 —— 隔天再打开，检验你还记得多少</summary>
+  <div class="sec-sub">换体裁（说明 → 议论），句子更长，但不引入新的生词。</div>
+  <div class="dp">
+    <p><b>A Career Is Not a Straight Line</b></p>
+    <p>Many of us are told to choose one career at eighteen and stay in it for life. That idea has a <span class="core">significant</span> problem: it treats work as a straight road, and <span class="chunk">one of the most</span> common reasons people feel lost is that the road was never straight.</p>
+    <p>Careers are not a <span class="core">process</span> that moves in one direction. <span class="core">Throughout</span> the past fifty years, <span class="core">entire</span> industries have appeared and disappeared, and skills that once brought a good job are now worth very little. The <span class="core">vast</span> world of work changes <span class="guess">continuously</span>, so no one can choose once and stop thinking.</p>
+    <p>The useful question is not "Did I choose right?" but "Can I keep learning?" <span class="chunk">Whether</span> you move to another city <span class="chunk">or</span> move to another <span class="core">career</span>, the rule is the same: stay <span class="chunk">open to</span> new ideas, and treat every big change as a <span class="core">potential</span> door rather than a wall.</p>
+    <p>That is why curiosity is <span class="chunk">key to</span> <span class="guess">long-term</span> success. A <span class="core">career</span> <span class="core">path</span> is not a line between A and B; it is something you keep drawing as you walk.</p>
+  </div>
+  <p class="legend">复现覆盖：核心单词 7/12 · 语块 4/6 · 可猜 2/5 ｜ 两篇合计：核心 12/12（含语块 6/6）· 可猜 5/5 全覆盖</p>
+</details>
+
+<div class="footer">
+  <span>上一篇：<a href="4.html">4 · The Blind Box Craze</a></span>
+  <span>下一篇：尚未制作 ｜ 返回 <a href="ABCmap.html">ABCmap 词汇地图</a></span>
+</div>
+
+</div>
+</body>
+</html>
